@@ -1,4 +1,4 @@
-rootProject.name = "Antimations"
+rootProject.name = "Essfton"
 
 pluginManagement {
     repositories {
@@ -18,7 +18,7 @@ pluginManagement {
 }
 
 plugins {
-    id("dev.kikugie.stonecutter") version "0.10-alpha.7"
+    id("dev.kikugie.stonecutter") version "0.10-alpha.10"
 }
 
 stonecutter {

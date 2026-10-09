@@ -13,7 +13,6 @@ val modId by CommonProperty<String>()
 val modDescription by CommonProperty<String>()
 val modIcon by CommonProperty<String>()
 val fabricLoaderVersion by CommonProperty<String>()
-val oneconfigVersion by CommonProperty<String>()
 val rangedVersion by CommonProperty<Boolean>()
 val maxMc by CommonProperty<String?>()
 val finalFileName by CommonProperty<String>()
@@ -68,7 +67,6 @@ dependencies {
     minecraft("com.mojang:minecraft:${sc.current.version}")
     mappings(ploceus.mcpMappings("stable", "1.8.9", "22"))
     implementation("net.fabricmc:fabric-loader:$fabricLoaderVersion")
-    implementation("org.polyfrost.oneconfig:${sc.current.version}-ornithe:$oneconfigVersion")
     compileOnly("net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7")
     implementation("net.ornithemc.osl-gen2:core:$oslCoreVersion")
     implementation("net.ornithemc.osl-gen2:entrypoints:$oslEntrypointsVersion")
@@ -115,7 +113,6 @@ tasks {
             val minecraftDependency =
                 if (rangedVersion) ">=${sc.current.version} <=${maxMc}" else sc.current.version
             register("minecraft", minecraftDependency)
-            register("oneconfigv1", target(oneconfigVersion))
             register("osl", target(oslVersion))
             register("mixinJava", "JAVA_${javaVersion.majorVersion}")
             register("mixinMin", "0.8")

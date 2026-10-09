@@ -1,0 +1,9 @@
+{
+  "package": "at.yedel.essfton.mixin",
+  "refmap": "mixins.${modId}.refmap.json",
+  "minVersion": "${mixinMin}",
+  "compatibilityLevel": "${mixinJava}",
+  "client": [
+
+  ]
+}

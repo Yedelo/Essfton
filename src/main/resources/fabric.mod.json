@@ -10,23 +10,14 @@
   "license": "${license}",
   "icon": "${modIcon}",
   "environment": "client",
-  "entrypoints": {
-    "client": [
-      "at.yedel.antimations.Antimations"
-    ]
-  },
   "mixins": [
-    "mixins.antimations.json"
+    "mixins.ssfton.json"
   ],
   "depends": {
     "java": "${java}",
     "fabricloader": "${fabricLoader}",
     "minecraft": "${minecraft}",
-    "oneconfigv1": "${oneconfigv1}",
     "osl": "${osl}"
-  },
-  "recommends": {
-    "modmenu": "*"
   },
   "contact": {
     "homepage": "https://modrinth.com/mod/${modId}",

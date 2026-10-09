@@ -8,7 +8,6 @@
     "url": "https://modrinth.com/mod/${modId}",
     "updateUrl": "",
     "authorList": ["Yedel"],
-    "credits": "Debuggingss for the handsome example mod",
     "logoFile": "${modIcon}",
     "screenshots": [],
     "dependencies": []

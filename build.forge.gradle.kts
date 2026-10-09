@@ -13,7 +13,6 @@ val modName by CommonProperty<String>()
 val modId by CommonProperty<String>()
 val modDescription by CommonProperty<String>()
 val modIcon by CommonProperty<String>()
-val oneconfigVersion by CommonProperty<String>()
 val rangedVersion by CommonProperty<Boolean>()
 val maxMc by CommonProperty<String?>()
 val finalFileName by CommonProperty<String>()
@@ -42,17 +41,13 @@ plugins {
 }
 
 dependencies {
-    listOf("implementation", "shade").forEach {
-        it("cc.polyfrost:oneconfig-wrapper-launchwrapper:${sc.properties.getAs<String>("versions.oneconfigwrapper")}")
-    }
-    compileOnly("cc.polyfrost:oneconfig-${mcData.version}-${mcData.loader}:$oneconfigVersion")
     compileOnly("org.spongepowered:mixin:0.7.11-SNAPSHOT")
 }
 
 toolkitLoomHelper {
     disableRunConfigs(GameSide.SERVER)
 
-    useTweaker("cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker")
+    useTweaker("org.spongepowered.asm.launch.MixinTweaker")
     useForgeMixin(modId)
     useMixinRefMap("$modId.refmap")
 
